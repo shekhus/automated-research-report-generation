@@ -3,11 +3,14 @@ import sys
 import json
 from dotenv import load_dotenv
 from utils.config_loader import load_config
+from research_and_analyst.utils.config_loader import load_config
+from .config_loader import load_config
+
 from langchain_google_genai import GoogleGenerativeAIEmbeddings, ChatGoogleGenerativeAI
 from langchain_openai import ChatOpenAI
 from langchain_groq import ChatGroq
 from logger import GLOBAL_LOGGER as log
-from exception.custom_exception import ProductAssistantException
+from exception.custom_exception import ResearchAnalystException
 import asyncio
 
 
@@ -64,7 +67,7 @@ class ModelLoader:
             )
         except Exception as e:
             log.error("Error loading embedding model", error=str(e))
-            raise ProductAssistantException("Failed to load embedding model", sys)
+            raise ResearchAnalystException("Failed to load embedding model", sys)
 
 
     def load_llm(self):
@@ -72,7 +75,7 @@ class ModelLoader:
         Load and return the configured LLM model.
         """
         llm_block = self.config["llm"]
-        provider_key = os.getenv("LLM_PROVIDER", "openai")
+        provider_key = os.getenv("LLM_PROVIDER", "google")
 
         if provider_key not in llm_block:
             log.error("LLM provider not found in config", provider=provider_key)
