@@ -1,8 +1,0 @@
-{"timestamp": "2025-10-11T14:49:58.232837Z", "level": "warning", "event": "OPENAI_API_KEY is missing from environment"}
-{"timestamp": "2025-10-11T14:49:58.236832Z", "level": "info", "event": "GOOGLE_API_KEY loaded from environment"}
-{"timestamp": "2025-10-11T14:49:58.240288Z", "level": "info", "event": "GROQ_API_KEY loaded from environment"}
-{"timestamp": "2025-10-11T14:49:58.243330Z", "level": "info", "event": "ASTRA_DB_API_ENDPOINT loaded from environment"}
-{"timestamp": "2025-10-11T14:49:58.246324Z", "level": "info", "event": "ASTRA_DB_APPLICATION_TOKEN loaded from environment"}
-{"timestamp": "2025-10-11T14:49:58.249317Z", "level": "info", "event": "ASTRA_DB_KEYSPACE loaded from environment"}
-{"config_keys": ["astra_db", "embedding_model", "retriever", "llm"], "timestamp": "2025-10-11T14:49:58.263711Z", "level": "info", "event": "YAML config loaded"}
-{"provider": "google", "model": "gemini-2.0-flash", "timestamp": "2025-10-11T15:06:18.767452Z", "level": "info", "event": "Loading LLM"}

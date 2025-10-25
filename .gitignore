@@ -9,3 +9,35 @@ wheels/
 # Virtual environments
 .venv
 .env
+
+# Python / general
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.env
+env/
+venv/
+*.sqlite
+*.db
+*.egg-info/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# VS Code
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs, locks, build
+*.log
+*.lock
+dist/
+build/
+eggs/
+parts/
+bin/
+var/                
